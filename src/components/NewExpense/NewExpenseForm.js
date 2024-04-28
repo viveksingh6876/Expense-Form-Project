@@ -71,7 +71,7 @@ function NewExpenseForm(props){
         setDate("");
     }
 
-    return <form onSubmit={formSubmitHandler}>
+    return <form id="form1" onSubmit={formSubmitHandler}>
         <div className="new-expense__controls">
             <div className="new-expense__control">
                 <label htmlFor="title">Title</label>
@@ -87,6 +87,7 @@ function NewExpenseForm(props){
             </div>
         </div>
         <div className="new-expense__actions">
+            <button type="button" onClick={() => {props.onCancel()}}>Cancel</button>
             <button type="submit">Add Expense</button>
         </div>
     </form>
